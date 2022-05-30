@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">My RecyclerView</string>
+    <string-array name="contacts">
+        <item>John</item>
+        <item>paul</item>
+        <item>mark</item>
+        <item>John kenedy</item>
+        <item>Ken</item>
+        <item>Vicky</item>
+        <item>Esther</item>
+        <item>Wambura</item>
+        <item>Lonarh</item>
+        <item>Japhet</item>
+    </string-array>
+    <string-array name="locations">
+        <item>Nairobi</item>
+        <item>Javakali</item>
+        <item>Muranga</item>
+        <item>Ndenderu</item>
+        <item>Nyeri</item>
+        <item>Mombasa</item>
+        <item>Kiambu</item>
+        <item>Meru</item>
+        <item>Nairobi</item>
+        <item>Nakuru</item>
+    </string-array>
+</resources>
