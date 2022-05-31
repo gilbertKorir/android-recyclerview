@@ -1,11 +1,13 @@
 package com.example.myrecyclerview;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,19 +36,29 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        // set the data in items
         holder.mycontacts.setText(data1[position]);
         holder.mylocations.setText(data2[position]);
         holder.myicons.setImageResource(images[position]);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context,data1[position],Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 
     //returning the number of objects
     @Override
     public int getItemCount() {
-        return data1.length;
+        return images.length;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
+        // init the item view's
         TextView mycontacts,mylocations;
         ImageView myicons;
 

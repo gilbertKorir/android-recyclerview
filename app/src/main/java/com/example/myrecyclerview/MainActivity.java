@@ -9,6 +9,7 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
+
     String s1[], s2[];
     int images[] = {R.drawable.c1, R.drawable.c10,R.drawable.c3, R.drawable.c4, R.drawable.c4,R.drawable.c5,
             R.drawable.c6,R.drawable.c7,R.drawable.c8, R.drawable.c9, R.drawable.c10};
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(myAdapter);
 
         // set LayoutManager to RecyclerView
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }
